@@ -12,8 +12,14 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+Explore the docs
+Official Themes
+Take Bootstrap 4 to the next level with official premium themes—toolkits built on Bootstrap with new components and plugins, docs, and build tools.
+
+
 
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <script src="js/scripts.js"></script>
@@ -37,13 +43,15 @@ body {
 
 
 
-  <!-- Overall Bootstrap Grid -->
+  <!-- Overall Bootstrap Grid from last activities -->
   <div class="container">
 
       <h1 class="text-center"><strong>HangmanGame!</strong></h1>
       <h4 class="text-center">Rated for coders by Ahmet Koylan</h4>
       <hr class="my-1">
       <center>
+
+<!-- lets play some stuff -->
       <audio controls autoplay>
     <source src="sound/TheSimpsons.mp3" type="audio/mpeg" />
     <a href="http://www.w3schools.com/html/horse.mp3">horse</a>
@@ -63,7 +71,7 @@ body {
             <br>
             <div class="row">
                 <div class="col-lg-1" id="chalk"></div>
-                <div class="donut">#of Lives Left:&nbsp;<span id="lives"></span></div> 
+                <div class="donut red">#of Lives Left:&nbsp;<span id="lives"></span></div> 
             
             
         </div>
@@ -79,7 +87,7 @@ body {
                     </div>
                     <div class="modal-body">
                         <p>
-                            <img class="img-responsive" src="assets/images/smartwin.gif" width="372" alt="homer simpson i am so smart gif" />
+                            <img class="img-responsive" src="img/smartwin.gif" width="372" alt="i am so smart gif" />
                         </p>
                     </div>
                     <div class="modal-footer">
@@ -99,7 +107,7 @@ body {
                     </div>
                     <div class="modal-body">
                         <p>
-                            <img class="img-responsive" src="assets/images/dohlose.gif" width="498" alt="homer doh animated gif" />
+                            <img class="img-responsive" src="img/dohlose.gif" width="498" alt="homer doh animated gif" />
                         </p>
                     </div>
                     <div class="modal-footer">
@@ -110,8 +118,8 @@ body {
             </div>
         </div>
     </div>
-    <audio id="smart" src="assets/sounds/smart.mp3"></audio>
-    <audio id="doh" src="assets/sounds/doh.mp3"></audio>
+    <audio id="smart" src="sound/smart.mp3"></audio>
+    <audio id="doh" src="sound/doh.mp3"></audio>
 </body>
 
 </html>

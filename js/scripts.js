@@ -9,6 +9,8 @@
 // Track totals
 // if won or lost start again with new game after alerting
 
+
+
 var words = ["ahmet", "mehmet", "apple" , "orange" , "kiwi" , "chicken" , "maple" , "banana"];
 var randomWord = "";
 var lives;
@@ -128,7 +130,6 @@ $(document).ready(function() {
     });
 });
 
-
 // Gets Link for Theme Song
       var audioElement = document.createElement("audio");
       audioElement.setAttribute("sound/TheSimpsons.mp3");
@@ -140,6 +141,4 @@ $(document).ready(function() {
 
       $(".pause-button").on("click", function() {
       	audioElement.pause();
-      });
-
- 
+      }); 
