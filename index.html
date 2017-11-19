@@ -42,7 +42,7 @@ body {
 
       <h1 class="text-center"><strong>HangmanGame!</strong></h1>
       <h4 class="text-center">Rated for coders by Ahmet Koylan</h4>
-      <hr>
+      <hr class="my-1">
       <center>
       <audio controls autoplay>
     <source src="sound/TheSimpsons.mp3" type="audio/mpeg" />
@@ -56,17 +56,19 @@ body {
     <div class="container col-lg-7 col-lg-offset-1">
         <div class="jumbotron">
             <h2 class="red">The Simpsons<sup>Hangman</sup></h2>
-            <p class="lead">Press any key on the keyboard to place your guess!</p>
-            <hr class="my-1">
+
+            
+            <p class="lead">Press any key above to place your guess!</p>
             <div id="letterAmount"> <div class="gamesWon">Games Won:&nbsp;<span id="gamesWon"></span></div> <div id="guessed"><p> Your guesses:</p></div> </div>
             <br>
             <div class="row">
                 <div class="col-lg-1" id="chalk"></div>
-                <div class="col-lg-1 col-lg-offset-1" id="donut"><span id="lives"></span> </div>
-            </div>
-            <br>
-            <button class="btn btn-danger btn-lg reset">Restart Game</button>
+                <div class="donut">#of Lives Left:&nbsp;<span id="lives"></span></div> 
+            
+            
         </div>
+        <br>
+        <div><button class="btn btn-danger btn-lg reset">Restart Game</button></div>
         <!-- WIN MODAL -->
         <div class="modal fade" id="winModal" role="dialog">
             <div class="modal-dialog">
