@@ -1,220 +1,222 @@
-.hangman-sprite0{ background-position: 0 0; width: 300px; height: 400px; } 
-.hangman-sprite1{ background-position: 0 -450px; width: 300px; height: 400px; } 
-.hangman-sprite2{ background-position: 0 -900px; width: 300px; height: 400px; } 
-.hangman-sprite3{ background-position: 0 -1350px; width: 300px; height: 400px; } 
-.hangman-sprite4{ background-position: 0 -1800px; width: 300px; height: 400px; } 
-.hangman-sprite5{ background-position: -350px 0; width: 300px; height: 400px; } 
-.hangman-sprite6{ background-position: -350px -450px; width: 300px; height: 400px; } 
-.hangman-sprite7{ background-position: -350px -900px; width: 300px; height: 400px; } 
 
-#hangman-sprite {
-  background-image: url(../img/hangman_all.png);
-  width: 300px;
-  height: 400px;
-  opacity: .7;
-  border-radius: 20px;
-  float:right;
-}
+  /*Commenting out un implemented code
+  /*.hangman-sprite0{ background-position: 0 0; width: 300px; height: 400px; } 
+  .hangman-sprite1{ background-position: 0 -450px; width: 300px; height: 400px; } 
+  .hangman-sprite2{ background-position: 0 -900px; width: 300px; height: 400px; } 
+  .hangman-sprite3{ background-position: 0 -1350px; width: 300px; height: 400px; } 
+  .hangman-sprite4{ background-position: 0 -1800px; width: 300px; height: 400px; } 
+  .hangman-sprite5{ background-position: -350px 0; width: 300px; height: 400px; } 
+  .hangman-sprite6{ background-position: -350px -450px; width: 300px; height: 400px; } 
+  .hangman-sprite7{ background-position: -350px -900px; width: 300px; height: 400px; } 
 
+  #hangman-sprite {
+    background-image: url(../img/hangman_all.png);
+    width: 300px;
+    height: 400px;
+    opacity: .7;
+    border-radius: 20px;
+    float:right;
+  }
+  */
 
-.header {
-  margin: 20px auto 40px auto;
-}
+  .header {
+    margin: 20px auto 40px auto;
+  }
 
-.sub-title {
-  font-size: .6em;
-  font-weight: 100;
-  letter-spacing: 1px;
-}
-h1 {
-    font-size: 66px !important;
-    color: antiquewhite !important;
-}
-body {    /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-  background: url(img/bartwall.jpg) no-repeat center fixed !important; 
-  background-size: cover !important;
-  font-color: white !important;
-    background-color: @body-bg !important;
-  
+  .sub-title {
+    font-size: .6em;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+  h1 {
+      font-size: 66px !important;
+      color: antiquewhite !important;
+  }
+  body {    /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    background: url(img/bartwall.jpg) no-repeat center fixed !important; 
+    background-size: cover !important;
+    font-color: white !important;
+      background-color: @body-bg !important;
+    
 
-}
-.red {
-    font-family: Pacifico !important;
-    font-size: 38px;
-}
-
-
-.container {
-    background-color:transparent !important;
-    padding-top: 35px;
+  }
+  .red {
+      font-family: Pacifico !important;
+      font-size: 38px;
+  }
 
 
-}
+  .container {
+      background-color:transparent !important;
+      padding-top: 35px;
 
-hr {
-   width: 75% !important;
-}
-.letter {
-  border-bottom: 2px solid black;
-  font-size: 2em;
-  height: 50px;
-  width: 30px;
-  text-align: center;
-  float: left;
-  margin-right: 10px;
-}
 
-#chalk {
-    background-image: url('../img/greenboard.jpg');
-    height: 240px;
-    width: 470px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 50px;
-    padding-left: 25px;
-}
+  }
 
-.letters {
+  hr {
+     width: 75% !important;
+  }
+  .letter {
+    border-bottom: 2px solid black;
+    font-size: 2em;
+    height: 50px;
+    width: 30px;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+  }
+
+  #chalk {
+      background-image: url('../img/greenboard.jpg');
+      height: 240px;
+      width: 470px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 50px;
+      padding-left: 25px;
+  }
+
+  .letters {
+      color: white;
+      font-size: 35px;
+  }
+
+  #guessed {
+      position: absolute;
+      margin-top: 222px;
+      z-index: 1;
+      color: white;
+      font-size: 20px;
+      font-family: Pacifico;
+  }
+
+  .gamesWon {
+      position: absolute;
+      margin-left: 310px;
+      margin-top: 30px;
+      z-index: 1;
+      color: white;
+      font-size: 20px;
+      font-family: Pacifico;
+  }
+
+  .donut {
+      position: absolute;
+      margin-left: 310px;
+      margin-top: 45px;
+      z-index: 1;
+      color: white;
+      font-size: 20px;
+      font-family: Pacifico;
+  }
+  .red {
+    color: #c0392b;
+  }
+
+  .green {
+    color: #2ecc71;
+  }
+
+  .initially-hidden {
+    display: none;
+  }
+
+  button#play-again {
+    display: none;
+    margin-top: 20px;
+  }
+
+  #unguessed-letters {
+    height: 150px;
+  }
+
+  #unguessed-letters p{
+    text-align: center;
+  }
+
+  .letter-choice {
+    margin: 10px;
+    font-size: 2em;
+    float: left;
+    cursor: pointer;
+  }
+
+  .letter-choice:hover {
+    color: #3498db;
+  }
+
+  .muted {
+    color: #aaa;
+  }
+
+  #incorrect-guesses h4 {
+    float: left;
+  }
+
+  .light-weight {
+    font-weight: 100;
+  }
+
+  .dropdown-menu > li {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+  }
+
+  .dropdown-menu > li:hover,
+  .dropdown-menu > li:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #428bca;
+  }
+
+  ul hr {
+    margin: 5px auto;
+  }
+
+  /* Vertically align alpha keypad, hangman, and graveyard */
+  #alphabet-keypad, #hangman-graphic, #letter-graveyard {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+  .row {
+    width: 100%;
+  }
+
+  /* Styles for the alphabet keypad */
+  #alphabet-keypad {
+    margin-left: 4%;
+    text-align: center;
+  }
+  .letter-button, .letter-disabled {
+    border-radius: 50%;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 1.6em;
+    height: 1.6em;
+    margin: 0.2em 0.1em;
+    padding-top: 0.1em;
+    width: 1.6em;
+
+    transition: color 0.2s,
+    background-color 0.2s;
+  }
+  .letter-button {
+    border: 1px solid rgb(60, 160, 210);
+    color: rgb(60, 160, 210);
+  }
+  .letter-button:hover {
+    background-color: rgb(60, 160, 210);
     color: white;
-    font-size: 35px;
-}
-
-#guessed {
-    position: absolute;
-    margin-top: 222px;
-    z-index: 1;
-    color: white;
-    font-size: 20px;
-    font-family: Pacifico;
-}
-
-.gamesWon {
-    position: absolute;
-    margin-left: 310px;
-    margin-top: 30px;
-    z-index: 1;
-    color: white;
-    font-size: 20px;
-    font-family: Pacifico;
-}
-
-.donut {
-    position: absolute;
-    margin-left: 310px;
-    margin-top: 45px;
-    z-index: 1;
-    color: white;
-    font-size: 20px;
-    font-family: Pacifico;
-}
-.red {
-  color: #c0392b;
-}
-
-.green {
-  color: #2ecc71;
-}
-
-.initially-hidden {
-  display: none;
-}
-
-button#play-again {
-  display: none;
-  margin-top: 20px;
-}
-
-#unguessed-letters {
-  height: 150px;
-}
-
-#unguessed-letters p{
-  text-align: center;
-}
-
-.letter-choice {
-  margin: 10px;
-  font-size: 2em;
-  float: left;
-  cursor: pointer;
-}
-
-.letter-choice:hover {
-  color: #3498db;
-}
-
-.muted {
-  color: #aaa;
-}
-
-#incorrect-guesses h4 {
-  float: left;
-}
-
-.light-weight {
-  font-weight: 100;
-}
-
-.dropdown-menu > li {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.428571429;
-  color: #333333;
-  white-space: nowrap;
-}
-
-.dropdown-menu > li:hover,
-.dropdown-menu > li:focus {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #428bca;
-}
-
-ul hr {
-  margin: 5px auto;
-}
-
-/* Vertically align alpha keypad, hangman, and graveyard */
-#alphabet-keypad, #hangman-graphic, #letter-graveyard {
-  display: inline-block;
-  vertical-align: middle;
-  float: none;
-}
-.row {
-  width: 100%;
-}
-
-/* Styles for the alphabet keypad */
-#alphabet-keypad {
-  margin-left: 4%;
-  text-align: center;
-}
-.letter-button, .letter-disabled {
-  border-radius: 50%;
-  display: inline-block;
-  font-family: monospace;
-  font-size: 1.6em;
-  height: 1.6em;
-  margin: 0.2em 0.1em;
-  padding-top: 0.1em;
-  width: 1.6em;
-
-  transition: color 0.2s,
-  background-color 0.2s;
-}
-.letter-button {
-  border: 1px solid rgb(60, 160, 210);
-  color: rgb(60, 160, 210);
-}
-.letter-button:hover {
-  background-color: rgb(60, 160, 210);
-  color: white;
-  cursor: pointer;
-}
-.letter-disabled {
-  border: 1px solid lightgrey;
-  color: lightgrey;
-  cursor: default;
-}
+    cursor: pointer;
+  }
+  .letter-disabled {
+    border: 1px solid lightgrey;
+    color: lightgrey;
+    cursor: default;
+  }
