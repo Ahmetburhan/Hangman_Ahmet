@@ -11,7 +11,7 @@
 
 
 
-var words = ["ahmet", "mehmet", "apple" , "orange" , "kiwi" , "chicken" , "maple" , "banana"];
+var words = ["napa", "san francisco", "walnut creek" , "sunnyvale" , "palo alto" , "stanford" , "san jose" , "redwood city"];
 var randomWord = "";
 var lives;
 var winCounter;

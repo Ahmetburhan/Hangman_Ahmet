@@ -1,6 +1,6 @@
 
-  /*Commenting out un implemented code
-  /*.hangman-sprite0{ background-position: 0 0; width: 300px; height: 400px; } 
+  /*Commenting out un implemented code*/
+  .hangman-sprite0{ background-position: 0 0; width: 300px; height: 400px; } 
   .hangman-sprite1{ background-position: 0 -450px; width: 300px; height: 400px; } 
   .hangman-sprite2{ background-position: 0 -900px; width: 300px; height: 400px; } 
   .hangman-sprite3{ background-position: 0 -1350px; width: 300px; height: 400px; } 
@@ -17,7 +17,7 @@
     border-radius: 20px;
     float:right;
   }
-  */
+  
 
   .header {
     margin: 20px auto 40px auto;
