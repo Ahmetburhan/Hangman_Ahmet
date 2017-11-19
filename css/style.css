@@ -17,6 +17,7 @@
   border-radius: 20px
 }
 
+
 .header {
   margin: 20px auto 40px auto;
 }
@@ -33,8 +34,9 @@ h1 {
 body {    /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
   background: url(img/bartwall.jpg) no-repeat center fixed !important; 
   background-size: cover !important;
-  font-color: white: !important;
+  font-color: white !important;
     background-color: @body-bg !important;
+  
 
 }
 .red {
@@ -50,7 +52,9 @@ body {    /* Adding !important forces the browser to overwrite the default style
 
 }
 
-
+hr {
+   width: 75% !important;
+}
 .letter {
   border-bottom: 2px solid black;
   font-size: 2em;

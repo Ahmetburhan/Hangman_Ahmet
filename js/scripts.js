@@ -10,32 +10,20 @@
 // if won or lost start again with new game after alerting
 
 
+// JavaScript function that wraps everything
+$(document).ready(function() {
 
-// ***PICKS A RANDOM WORD FROM ARRAY***
-function generateRandomWord() {
-    randomWord = words[Math.floor(Math.random() * (words.length))];
+      // Gets Link for Theme Song
+      var audioElement = document.createElement("audio");
+      audioElement.setAttribute("sound/TheSimpsons.mp3");
+
+      // Theme Button
+      $(".theme-button").on("click", function() {
+      	audioElement.play();
+      });
+
+      $(".pause-button").on("click", function() {
+      	audioElement.pause();
+      });
+
 }
-
-
-var words = ["ahmet", "mehmet", "apple"];
-var randomWord = "";
-var lives;
-var winCounter;
-var guesses;
-var indexChecker;
-var gamesWon = 0;
-var donutBite = 0;
-
-// ***ADD UNDERSCORES BASED ON WORD LENGTH***
-function addSpaces(randomWord) {
-    for (var i = 0; i < randomWord.length; i++) {
-        if (randomWord[i] != " ") {
-            $("<span class='letters'>").text("_ ").appendTo("#chalk");
-        } else {
-            $("<span class='letters'>").html('&nbsp&nbsp&nbsp;').appendTo("#chalk");
-            winCounter++;
-        }
-    }
-}
-
-
