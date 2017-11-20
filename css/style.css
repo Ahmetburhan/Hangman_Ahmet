@@ -18,7 +18,9 @@
     float:right;
   }
   
-
+  .modal-content {
+    padding: 5%;
+}
   .header {
     margin: 20px auto 40px auto;
   }
