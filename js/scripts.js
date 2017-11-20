@@ -8,7 +8,7 @@
 // Win or lose condition indexChecker
 // Track totals
 // if won or lost start again with new game after alerting
-
+ 
 
 
 var words = ["napa", "san francisco", "walnut creek" , "sunnyvale" , "palo alto" , "stanford" , "san jose" , "redwood city"];
@@ -129,6 +129,14 @@ $(document).ready(function() {
         checkLetter(event);
     });
 });
+
+// auto load pop up menu
+
+    // $(window).load(function(){        
+    //   $('#instruct').modal('show');
+    // }); 
+
+
 
 // Gets Link for Theme Song
       var audioElement = document.createElement("audio");

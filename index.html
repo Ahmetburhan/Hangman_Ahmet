@@ -1,112 +1,148 @@
-    <!DOCTYPE html>
-    <html>
+        <!DOCTYPE html>
+        <html>
 
-    <head>
-        <title>The Simpsons Hangman! by Ahmet K.</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <script src="js/scripts.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">    
-        
-    </head>
-        <body>
-    <style> 
-    body { 
-        /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-      background: url(img/bartwall.jpg) no-repeat center fixed !important; 
-      background-size: cover !important;
-      font-color: white: !important;
-        background-color: @body-bg !important;
+        <head>
+            <title>The Simpsons Hangman! by Ahmet K.</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <script src="js/scripts.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">    
+        <script type="text/javascript">
+        $(document).ready(function(){
+        $("#myModal").modal('show');
+ });
+</script>
+        </head>
+            <body>
+        <style> 
+        body { 
+            /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+          background: url(img/bartwall.jpg) no-repeat center fixed !important; 
+          background-size: cover !important;
+          font-color: white: !important;
+            background-color: @body-bg !important;
 
-    }
+        }
 
-    </style>
-
-
+        </style>
 
 
 
-      <!-- Overall Bootstrap Grid from last activities -->
-      <div class="container">
 
-          <h1 class="text-center"><strong>HangmanGame!</strong></h1>
-          <h4 class="text-center">Rated for coders by Ahmet Koylan</h4>
-          <hr class="my-1">
-          <center>
 
-    <!-- lets play some stuff -->
-          <audio controls autoplay>
-        <source src="sound/TheSimpsons.mp3" type="audio/mpeg" />
-        <a href="http://www.w3schools.com/html/horse.mp3">horse</a>
-        </audio>
-        </center>
+          <!-- Overall Bootstrap Grid from last activities -->
+          <div class="container">
 
-        </div>
+              <h1 class="text-center"><strong>HangmanGame!</strong></h1>
+              <h4 class="text-center">Rated for coders by Ahmet Koylan</h4>
+              <hr class="my-1">
+              <center>
 
-    <!-- Simpson stuff and playground -->
+        <!-- lets play some stuff -->
+              <audio controls autoplay>
+            <source src="sound/TheSimpsons.mp3" type="audio/mpeg" />
+            <a href="http://www.w3schools.com/html/horse.mp3">horse</a>
+            </audio>
+            </center>
 
-        <div class="container col-lg-7 col-lg-offset-1">
-            <div class="jumbotron">
-                <h2 class="red">The Simpsons<sup>Hangman</sup></h2>
+            </div>
 
-                
-                <p class="lead">Press any key  to place your guess of Bay Area Cities!</p>
-                <div id="letterAmount"> <div class="gamesWon">Games Won:&nbsp;<span id="gamesWon"></span></div> <div id="guessed"><p> Your guesses:</p></div> </div>
+        <!-- Simpson stuff and playground -->
+
+            <div class="container col-lg-7 col-lg-offset-1">
+                <div class="jumbotron">
+                    <h2 class="red">The Simpsons<sup>Hangman</sup></h2>
+
+                    
+                    <p class="lead">Press any key  to place your guess of Bay Area Cities!</p>
+                    <div id="letterAmount"> <div class="gamesWon">Games Won:&nbsp;<span id="gamesWon"></span></div> <div id="guessed"><p> Your guesses:</p></div> </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-1" id="chalk"></div>
+                        <div class="donut red">#of Lives Left:&nbsp;<span id="lives"></span></div> 
+                    
+                    
+                </div>
                 <br>
-                <div class="row">
-                    <div class="col-lg-1" id="chalk"></div>
-                    <div class="donut red">#of Lives Left:&nbsp;<span id="lives"></span></div> 
-                
-                
-            </div>
-            <br>
-            <div><button class="btn btn-danger btn-lg reset">Restart Game</button></div>
-            <!-- pop up on the winning case -->
-            <div class="modal fade" id="winModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Eat a donut! You deserve it!</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                <img class="img-responsive" src="img/smartwin.gif" width="372" alt="i am so smart gif" />
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <p class="pull-left">Nice! The word again was: &nbsp;</p><span class="theWord text-left pull-left"></span>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- pop up on losing model -->
-            <div class="modal fade" id="loseModal" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">At least you have your good looks!</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                <img class="img-responsive" src="img/youarealoser.gif" width="498" alt="homers gif" />
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <p class="pull-left">Sorry! The word was: &nbsp;</p><span class="theWord text-left pull-left"></span>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <audio id="smart" src="sound/smart.mp3"></audio>
-        <audio id="doh" src="sound/doh.mp3"></audio>
-    </body>
+                <div><button class="btn btn-danger btn-lg reset">Restart Game</button></div>
+                <div id="instruct">
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#myModal">How to play?</button>
 
-    </html>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title red">HangGame tutorial!</h3>
+            </div>
+            <h4>Here's the scoop: The objective is to guess what word fills the blank spaces below. If you can't guess ask simpsons a hint</h4>
+            <ol>
+
+                <li>Click on a key of your guess to start.</li>
+                <li>If the letter is contained in the word(s), it will display in the word board below  OR if not part of the hangman will make the sound to alert you, and the letter you chose will go to the bottom as missed letters.</li>
+                <li>Reset and repeat until either you guessed the whole word or the man is hung [heh, heh].</li>
+          <div class="modal-footer">
+
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+          </div>
+         
+          </div>
+        </div>
+      </div>
+      
+    </div>
+                <!-- pop up on the winning case -->
+                <div class="modal fade" id="winModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Eat a donut! You deserve it!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <img class="img-responsive" src="img/smartwin.gif" width="372" alt="i am so smart gif" />
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <p class="pull-left">Nice! The word again was: &nbsp;</p><span class="theWord text-left pull-left"></span>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- pop up on losing model -->
+                <div class="modal fade" id="loseModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">At least you have your good looks!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <img class="img-responsive" src="img/youarealoser.gif" width="498" alt="homers gif" />
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <p class="pull-left">Sorry! The word was: &nbsp;</p><span class="theWord text-left pull-left"></span>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <audio id="smart" src="sound/smart.mp3"></audio>
+            <audio id="doh" src="sound/doh.mp3"></audio>
+        </body>
+
+        </html>
